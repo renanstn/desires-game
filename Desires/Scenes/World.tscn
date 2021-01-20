@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Sign.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Water.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/WaterTop.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Moon.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/Sun.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/Fishermen.tscn" type="PackedScene" id=10]
+
+[node name="World" type="Node2D"]
+position = Vector2( 512, 320 )
+
+[node name="Background" parent="." instance=ExtResource( 2 )]
+
+[node name="Platform" type="Node" parent="."]
+
+[node name="Platform" parent="Platform" instance=ExtResource( 3 )]
+position = Vector2( 64, 448 )
+
+[node name="Platform2" parent="Platform" instance=ExtResource( 3 )]
+position = Vector2( 192, 448 )
+
+[node name="Platform3" parent="Platform" instance=ExtResource( 3 )]
+position = Vector2( 320, 448 )
+
+[node name="Platform4" parent="Platform" instance=ExtResource( 3 )]
+position = Vector2( 448, 448 )
+
+[node name="Sign" parent="Platform" instance=ExtResource( 5 )]
+position = Vector2( 64, 320 )
+
+[node name="Water" type="Node" parent="."]
+
+[node name="Water" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 64, 704 )
+
+[node name="Water2" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 192, 704 )
+
+[node name="Water3" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 320, 704 )
+
+[node name="Water4" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 448, 704 )
+
+[node name="Water5" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 576, 704 )
+
+[node name="Water6" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 704, 704 )
+
+[node name="Water7" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 832, 704 )
+
+[node name="Water8" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 960, 704 )
+
+[node name="Water9" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 64, 576 )
+
+[node name="Water10" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 192, 576 )
+
+[node name="Water11" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 320, 576 )
+
+[node name="Water12" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 448, 576 )
+
+[node name="Water13" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 576, 576 )
+
+[node name="Water14" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 704, 576 )
+
+[node name="Water15" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 832, 576 )
+
+[node name="Water16" parent="Water" instance=ExtResource( 6 )]
+position = Vector2( 960, 576 )
+
+[node name="WaterTop" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 576, 448 )
+
+[node name="WaterTop2" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 704, 448 )
+
+[node name="WaterTop3" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 832, 448 )
+
+[node name="WaterTop4" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 960, 448 )
+
+[node name="SunMoonController" type="Node2D" parent="."]
+position = Vector2( 128, 0 )
+
+[node name="Sun" parent="SunMoonController" instance=ExtResource( 9 )]
+position = Vector2( 0, -384 )
+
+[node name="Moon" parent="SunMoonController" instance=ExtResource( 8 )]
+position = Vector2( 0, 384 )
+
+[node name="Fishermen" parent="." instance=ExtResource( 10 )]
+position = Vector2( 40.0452, 13.3484 )
