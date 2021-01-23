@@ -4,12 +4,34 @@ extends Node
 onready var vara = get_node("Vara")
 onready var boia = get_node("Boia")
 
+onready var pull_timer = $PullTime
 
-# Called when the node enters the scene tree for the first time.
+enum states {
+	IDLE,
+	ALERT,
+	CATCH
+}
+var actual_state
+
+
 func _ready():
-	pass # Replace with function body.
+	randomize()
+	actual_state = states.IDLE
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	var chances = randf()
+	if chances < 0.01:
+		actual_state = states.ALERT
+		pull_timer.start()
+		print("!!!")
+	if Input.is_action_just_pressed("Pull"):
+		if actual_state == states.ALERT:
+			print("pegou!")
+			actual_state = states.IDLE
+		else:
+			print("...")
+
+
+func _on_PullTime_timeout():
+	actual_state = states.IDLE

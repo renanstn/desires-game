@@ -1,8 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Scenes/Background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes/Platform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Sign.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Water.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/WaterTop.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Moon.tscn" type="PackedScene" id=8]
@@ -13,23 +11,6 @@
 position = Vector2( 512, 320 )
 
 [node name="Background" parent="." instance=ExtResource( 2 )]
-
-[node name="Platform" type="Node" parent="."]
-
-[node name="Platform" parent="Platform" instance=ExtResource( 3 )]
-position = Vector2( 64, 448 )
-
-[node name="Platform2" parent="Platform" instance=ExtResource( 3 )]
-position = Vector2( 192, 448 )
-
-[node name="Platform3" parent="Platform" instance=ExtResource( 3 )]
-position = Vector2( 320, 448 )
-
-[node name="Platform4" parent="Platform" instance=ExtResource( 3 )]
-position = Vector2( 448, 448 )
-
-[node name="Sign" parent="Platform" instance=ExtResource( 5 )]
-position = Vector2( 64, 320 )
 
 [node name="Water" type="Node" parent="."]
 
@@ -84,6 +65,18 @@ position = Vector2( 960, 576 )
 [node name="WaterTop" parent="Water" instance=ExtResource( 7 )]
 position = Vector2( 576, 448 )
 
+[node name="WaterTop5" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 448, 448 )
+
+[node name="WaterTop6" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 320, 448 )
+
+[node name="WaterTop7" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 192, 448 )
+
+[node name="WaterTop8" parent="Water" instance=ExtResource( 7 )]
+position = Vector2( 64, 448 )
+
 [node name="WaterTop2" parent="Water" instance=ExtResource( 7 )]
 position = Vector2( 704, 448 )
 
@@ -97,10 +90,10 @@ position = Vector2( 960, 448 )
 position = Vector2( 128, 0 )
 
 [node name="Sun" parent="SunMoonController" instance=ExtResource( 9 )]
-position = Vector2( 0, -384 )
+position = Vector2( 0, -256 )
 
 [node name="Moon" parent="SunMoonController" instance=ExtResource( 8 )]
-position = Vector2( 0, 384 )
+position = Vector2( 0, 256 )
 
 [node name="Fishermen" parent="." instance=ExtResource( 10 )]
-position = Vector2( 40.0452, 13.3484 )
+position = Vector2( -2.67029e-05, 64 )
