@@ -27,4 +27,8 @@ texture = ExtResource( 1 )
 [node name="PullTime" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
+[node name="NextFishTimer" type="Timer" parent="."]
+one_shot = true
 [connection signal="timeout" from="PullTime" to="." method="_on_PullTime_timeout"]
+[connection signal="timeout" from="NextFishTimer" to="." method="_on_NextFishTimer_timeout"]
