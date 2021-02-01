@@ -20,6 +20,7 @@ func _ready():
 	randomize()
 	actual_state = states.IDLE
 	var next_fish = rand_range(MIN_FISH_TIME, MAX_FISH_TIME)
+	print("Próximo peixe em:")
 	print(next_fish)
 	next_fish_timer.wait_time = next_fish
 	next_fish_timer.start()
@@ -35,14 +36,16 @@ func _process(delta):
 
 
 func _on_PullTime_timeout():
+	print("Perdeu...")
 	actual_state = states.IDLE
+	var next_fish = rand_range(MIN_FISH_TIME, MAX_FISH_TIME)
+	print("Próximo peixe em:")
+	print(next_fish)
+	next_fish_timer.wait_time = next_fish
+	next_fish_timer.start()
 
 
 func _on_NextFishTimer_timeout():
 	actual_state = states.ALERT
 	pull_timer.start()
 	print("!!!")
-	var next_fish = rand_range(MIN_FISH_TIME, MAX_FISH_TIME)
-	print(next_fish)
-	next_fish_timer.wait_time = next_fish
-	next_fish_timer.start()
