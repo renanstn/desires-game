@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fishermen.png-20ad9e870c6b699fa84ba752343b543c.stex"
+path="res://.import/PERNA.png-589ae8f6aefa716378bdbf5328cab025.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Characters/fishermen.png"
-dest_files=[ "res://.import/fishermen.png-20ad9e870c6b699fa84ba752343b543c.stex" ]
+source_file="res://Sprites/Characters/PERNA.png"
+dest_files=[ "res://.import/PERNA.png-589ae8f6aefa716378bdbf5328cab025.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=false
+detect_3d=true
 svg/scale=1.0
