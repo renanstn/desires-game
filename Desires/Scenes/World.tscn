@@ -7,6 +7,8 @@
 position = Vector2( 512, 320 )
 
 [node name="GameController" parent="." instance=ExtResource( 1 )]
+fishermen_path = NodePath("Fishermen")
 
-[node name="Fishermen" parent="." instance=ExtResource( 10 )]
-position = Vector2( -2.67029e-05, 64 )
+[node name="Fishermen" parent="GameController" instance=ExtResource( 10 )]
+position = Vector2( 512, 384 )
+scale = Vector2( 0.2, 0.2 )
