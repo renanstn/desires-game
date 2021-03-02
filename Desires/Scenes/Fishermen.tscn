@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scripts/Fishermen.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Characters/VARA.png" type="Texture" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://Sprites/Characters/MÃO FECHADA.png" type="Texture" id=6]
 [ext_resource path="res://Sprites/Characters/PERNA.png" type="Texture" id=7]
 [ext_resource path="res://Sprites/Characters/TRONCO ESCOLIOSE.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Characters/TILAAAAAAPIA.png" type="Texture" id=9]
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=1]
 resource_name = "Alert"
 length = 0.5
 tracks/0/type = "value"
@@ -25,8 +26,119 @@ tracks/0/keys = {
 "values": [ 0.0, -22.3376 ]
 }
 
-[sub_resource type="Animation" id=1]
-resource_name = "Idle"
+[sub_resource type="Animation" id=4]
+resource_name = "Gotcha"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("BARCO:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2.5, 3, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.68697, -2.67486, 1.79837, -3.83704, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BARCO/PERNA:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE:rotation_degrees")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -7.7036, -4.96995, -2.07474, -13.7879, -0.852038, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/CABEÇA:rotation_degrees")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -9.47152, -26.3917, -14.3272, 0.0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO:rotation_degrees")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1.5, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -20.9346, -25.5129, 10.6434, -64.5216, -5.24602, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA:rotation_degrees")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 2.5, 3, 3.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -22.6861, -21.2542, -24.9552, 2.4078, 0.0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA/VARA:rotation_degrees")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA/VARA/TILAAAAAAPIA:rotation_degrees")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1, 2, 2.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 270.0, 276.136, 331.729, 323.762, 270.0 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA/VARA/TILAAAAAAPIA:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 2.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=2]
 length = 2.0
 loop = true
 tracks/0/type = "value"
@@ -113,6 +225,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA/VARA/TILAAAAAAPIA:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "Lost"
@@ -127,7 +251,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.3, 1, 2, 3 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ -0.85189, 3.29995, -3.14715, 1.26135, -0.85189 ]
+"values": [ 0.0, 3.29995, -3.14715, 1.26135, -0.85189 ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath("BARCO/PERNA:rotation_degrees")
@@ -201,13 +325,24 @@ tracks/6/keys = {
 "update": 0,
 "values": [ 0.0 ]
 }
+tracks/7/type = "value"
+tracks/7/path = NodePath("BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA/VARA/TILAAAAAAPIA:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
 
 [node name="Fishermen" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="BARCO" type="Sprite" parent="."]
 position = Vector2( -293.387, 245.641 )
-rotation = -0.0148683
 texture = ExtResource( 3 )
 offset = Vector2( 293.387, -295.641 )
 
@@ -218,7 +353,6 @@ offset = Vector2( 238.649, -157.639 )
 
 [node name="TRONCO ESCOLIOSE" type="Sprite" parent="BARCO/PERNA"]
 position = Vector2( -55.4991, 0 )
-rotation = 0.0453221
 texture = ExtResource( 8 )
 offset = Vector2( 294.148, -157.639 )
 
@@ -229,7 +363,6 @@ offset = Vector2( 194.922, 92.9478 )
 
 [node name="BRAÇO" type="Sprite" parent="BARCO/PERNA/TRONCO ESCOLIOSE"]
 position = Vector2( 45.4084, -181.634 )
-rotation = -0.0546778
 texture = ExtResource( 4 )
 offset = Vector2( 248.739, 23.9943 )
 
@@ -243,8 +376,16 @@ position = Vector2( 16.927, -18.7089 )
 texture = ExtResource( 2 )
 offset = Vector2( 32.6936, -28.8904 )
 
+[node name="TILAAAAAAPIA" type="Sprite" parent="BARCO/PERNA/TRONCO ESCOLIOSE/BRAÇO/MÃO FECHADA/VARA"]
+position = Vector2( 650.935, -229.413 )
+rotation = 4.71239
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 9 )
+offset = Vector2( -3590.78, 113.393 )
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Alert = SubResource( 2 )
-anims/Idle = SubResource( 1 )
+anims/Alert = SubResource( 1 )
+anims/Gotcha = SubResource( 4 )
+anims/Idle = SubResource( 2 )
 anims/Lost = SubResource( 3 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
